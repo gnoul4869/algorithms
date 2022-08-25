@@ -15,7 +15,7 @@
  ! Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell! 
  */
 
-const prices = [7, 1, 5, 3, 6, 4];
+const prices = [2, 1, 2, 1, 0, 1, 2];
 
 let possibleBuy;
 let possibleProfit = 0;
@@ -26,7 +26,7 @@ prices.forEach((price, i) => {
     console.log(`Current mimimum price to buy is ${possibleBuy}`);
     console.log(`Current maximum profit is ${possibleProfit}`);
 
-    if (price < possibleBuy || !possibleBuy) {
+    if (price < possibleBuy || possibleBuy === undefined) {
         possibleBuy = price;
         console.log(`New minimum price: ${price}`);
     }
